@@ -33,7 +33,7 @@ public class FW {
         timer.EndTimeRecording();
     }
 
-    public String GetTime() {
-        return (timer.CountTime() + " in " + Thread.currentThread().getName());
+    public double GetTime() {
+        return (timer.CountTime());
     }
 }

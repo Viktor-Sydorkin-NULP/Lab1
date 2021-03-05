@@ -62,5 +62,4 @@ public class Main {
             answer = scanner.nextInt();
         } while (answer != 0);
     }
-
 }

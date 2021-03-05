@@ -23,7 +23,7 @@ public class Gen implements Runnable {
     public void Choose(int amount) {
         System.out.println("How many threads to generate (1-4):");
         threads = scanner.nextInt();
-        while (!(threads <=4 && threads >=1)) {
+        while (!(threads <= 4 && threads >= 1)) {
             System.out.println("Entered the wrong number!");
             threads = scanner.nextInt();
         }
@@ -49,8 +49,8 @@ public class Gen implements Runnable {
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                start = end+1;
-                end = amount-temp;
+                start = end + 1;
+                end = amount - temp;
                 thread2.start();
                 try {
                     thread1.join();
@@ -72,7 +72,7 @@ public class Gen implements Runnable {
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                start = end+1;
+                start = end + 1;
                 end *= 2;
                 thread2.start();
                 try {
@@ -80,7 +80,7 @@ public class Gen implements Runnable {
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                start = end+1;
+                start = end + 1;
                 end = amount - temp;
                 thread3.start();
                 try {
@@ -104,7 +104,7 @@ public class Gen implements Runnable {
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                start = end+1;
+                start = end + 1;
                 end = amount / 2;
                 thread2.start();
                 try {
@@ -112,7 +112,7 @@ public class Gen implements Runnable {
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                start = end+1;
+                start = end + 1;
                 end = (amount / 4) * 3;
                 thread3.start();
                 try {
@@ -120,7 +120,7 @@ public class Gen implements Runnable {
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                start = end+1;
+                start = end + 1;
                 end = amount - temp;
                 thread4.start();
                 try {
@@ -153,8 +153,8 @@ public class Gen implements Runnable {
         return true;
     }
 
-    public String GetTime() {
-        return (timer.CountTime() + " in " + Thread.currentThread().getName());
+    public double GetTime() {
+        return (timer.CountTime());
     }
 }
 
