@@ -1,5 +1,6 @@
 package com.company;
 
+import java.util.Collections;
 import java.util.Scanner;
 
 public class Main {
@@ -9,17 +10,21 @@ public class Main {
         do {
             System.out.println("Generate numbers or get them from the file:");
             int check;
+            int amount;
+            FR fr = null;
+            FW fw = null;
             Gen gen = new Gen();
             Scanner scanner = new Scanner(System.in);
             check = scanner.nextInt();
-            FR fr = null;
-            FW fw = null;
             while (check != 1 && check != 2) {
                 System.out.println("Entered the wrong number!");
                 check = scanner.nextInt();
             }
             if (check == 1) {
-                gen.Generate();
+                System.out.println("How many numbers to generate:");
+                amount = scanner.nextInt();
+                gen.Choose(amount);
+                Collections.sort(gen.primeNumbers);
             } else {
                 fr = new FR();
                 gen.primeNumbers = fr.pFileNums;

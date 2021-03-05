@@ -1,16 +1,18 @@
 package com.company;
 
-public class SimpleTimer{
+public class SimpleTimer {
     private long startTime = 0;
     private long endTime = 0;
 
-    public void StartTimeRecording(){
+    public void StartTimeRecording() {
         startTime = System.currentTimeMillis();
     }
-    public void EndTimeRecording(){
+
+    public void EndTimeRecording() {
         endTime = System.currentTimeMillis();
     }
-    public double CountTime(){
-       return ((endTime-startTime) /1000.0);
+
+    public double CountTime() {
+        return ((endTime - startTime) / 1000.0);
     }
 }

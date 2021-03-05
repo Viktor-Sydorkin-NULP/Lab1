@@ -62,7 +62,7 @@ public class Executor {
         timer.EndTimeRecording();
     }
 
-    public double GetTime() {
-        return timer.CountTime();
+    public String GetTime() {
+        return (timer.CountTime() + " in " + Thread.currentThread().getName());
     }
 }

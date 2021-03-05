@@ -10,6 +10,7 @@ public class FR {
     BufferedReader br;
     ArrayList<Integer> pFileNums = new ArrayList<>();
     private SimpleTimer timer = new SimpleTimer();
+
     public FR() {
         timer.StartTimeRecording();
         try {
@@ -18,17 +19,18 @@ public class FR {
             System.out.println(fnfe.getLocalizedMessage());
         }
         try {
-            String tmp= br.readLine();
+            String tmp = br.readLine();
             while (tmp != null) {
                 pFileNums.addAll(Arrays.stream(tmp.split(" ")).map(Integer::parseInt).collect(Collectors.toList()));
-                tmp=br.readLine();
+                tmp = br.readLine();
             }
         } catch (IOException e) {
             System.out.println(e);
         }
         timer.EndTimeRecording();
     }
-    public double GetTime() {
-        return timer.CountTime();
+
+    public String GetTime() {
+        return (timer.CountTime() + " in " + Thread.currentThread().getName());
     }
 }
