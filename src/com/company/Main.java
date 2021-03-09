@@ -1,5 +1,10 @@
 package com.company;
 
+import com.company.execution.Executor;
+import com.company.execution.Gen;
+import com.company.workingwithfile.FR;
+import com.company.workingwithfile.FW;
+
 import java.util.Collections;
 import java.util.Scanner;
 

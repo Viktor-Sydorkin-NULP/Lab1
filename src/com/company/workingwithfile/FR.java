@@ -1,4 +1,6 @@
-package com.company;
+package com.company.workingwithfile;
+
+import com.company.execution.SimpleTimer;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -9,7 +11,7 @@ import java.util.stream.Collectors;
 public class FR implements Runnable {
     File file = new File("PrimeNumbers.txt");
     BufferedReader br;
-    ArrayList<Integer> pFileNums = new ArrayList<>();
+    public ArrayList<Integer> pFileNums = new ArrayList<>();
     private SimpleTimer timer = new SimpleTimer();
     Thread thread1 = new Thread(this);
     Thread thread2 = new Thread(this);

@@ -1,4 +1,4 @@
-package com.company;
+package com.company.execution;
 
 public class SimpleTimer {
     private long startTime = 0;
